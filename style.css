@@ -1,13 +1,32 @@
-/*.center {*/
-    /*position: relative;*/
-    /*width: 50%;*/
-    /*margin: auto;*/
-    /*top: 50%;*/
-    /*transform: perspective(1px) translateY(-50%);*/
-/*}*/
+:root {
+    --main-size: 112px;
+    --sub-size: 32px;
+}
+
+body {
+    color: #131313;
+}
+
+#main {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    font-size: 112px;
+}
+
+#sub {
+    font-family: Cochin, serif;
+    font-weight: normal;
+    position: fixed;
+    display: flex;
+    top: calc(50% + var(--main-size) + var(--sub-size)/2);
+    left: 50%;
+    font-size: var(--sub-size);
+}
 
 .center {
-    position: fixed;
     margin: 0;
     padding: 0;
     transform: translate(-50%, -50%);
@@ -15,19 +34,16 @@
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    display: flex;
 }
 
-#main {
-    top: 50%;
-    left: 50%;
-    font-size: 112px;
-}
-
-#sub {
-    top: calc(50% + 32px);
-    left: 50%;
-    font-size: 18px;
+.horizontal_center {
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
 }
 
 .shadow {
